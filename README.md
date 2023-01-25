@@ -57,19 +57,19 @@ THe sample repository contains two simplest examples of ObjectScript classes: Ob
 
 ```
 $ docker-compose exec iris iris session iris -U IRISAPP
-IRISAPP>write ##class(dc.sample.ObjectScript).Test()
+IRISAPP>write ##class(Eugen.sample.ObjectScript).Test()
 It works!
 42
 ```
 
 
 
-2. Class `dc.sample.PersistentClass` contains a method `CreateRecord` that creates an object with one property, `Test`, and returns its id.
+2. Class `Eugen.sample.PersistentClass` contains a method `CreateRecord` that creates an object with one property, `Test`, and returns its id.
 
 Open IRIS terminal and run:
 
 ```
-IRISAPP>write ##class(dc.sample.PersistentClass).CreateRecord(.id)
+IRISAPP>write ##class(Eugen.sample.PersistentClass).CreateRecord(.id)
 1
 IRISAPP>write id
 1
@@ -80,7 +80,7 @@ In your case the value of id could be different. And it will be different with e
 You can check whether the record exists and try to right the property of the object by its id.
 
 ```
-IRISAPP>write ##class(dc.sample.PersistentClass).ReadProperty(id)
+IRISAPP>write ##class(Eugen.sample.PersistentClass).ReadProperty(id)
 Test string
 ```
 
@@ -114,41 +114,41 @@ IRISAPP>zpm
 =============================================================================
 zpm:IRISAPP>load /irisrun/repo
 
-[dc-sample-template]    Reload START (/irisrun/repo/)
-[dc-sample-template]    Reload SUCCESS
-[dc-sample-template]    Module object refreshed.
-[dc-sample-template]    Validate START
-[dc-sample-template]    Validate SUCCESS
-[dc-sample-template]    Compile START
-[dc-sample-template]    Compile SUCCESS
-[dc-sample-template]    Activate START
-[dc-sample-template]    Configure START
-[dc-sample-template]    Configure SUCCESS
-[dc-sample-template]    MakeDeployed START
-[dc-sample-template]    MakeDeployed SUCCESS
-[dc-sample-template]    Activate SUCCESS
-zpm:IRISAPP>test dc-sample-template
+[Eugen-sample-template]    Reload START (/irisrun/repo/)
+[Eugen-sample-template]    Reload SUCCESS
+[Eugen-sample-template]    Module object refreshed.
+[Eugen-sample-template]    Validate START
+[Eugen-sample-template]    Validate SUCCESS
+[Eugen-sample-template]    Compile START
+[Eugen-sample-template]    Compile SUCCESS
+[Eugen-sample-template]    Activate START
+[Eugen-sample-template]    Configure START
+[Eugen-sample-template]    Configure SUCCESS
+[Eugen-sample-template]    MakeDeployed START
+[Eugen-sample-template]    MakeDeployed SUCCESS
+[Eugen-sample-template]    Activate SUCCESS
+zpm:IRISAPP>test Eugen-sample-template
 
-[dc-sample-template]    Reload START (/irisrun/repo/)
-[dc-sample-template]    Reload SUCCESS
-[dc-sample-template]    Module object refreshed.
-[dc-sample-template]    Validate START
-[dc-sample-template]    Validate SUCCESS
-[dc-sample-template]    Compile START
-[dc-sample-template]    Compile SUCCESS
-[dc-sample-template]    Activate START
-[dc-sample-template]    Configure START
-[dc-sample-template]    Configure SUCCESS
-[dc-sample-template]    MakeDeployed START
-[dc-sample-template]    MakeDeployed SUCCESS
-[dc-sample-template]    Activate SUCCESS
-[dc-sample-template]    Test STARTIt works!
+[Eugen-sample-template]    Reload START (/irisrun/repo/)
+[Eugen-sample-template]    Reload SUCCESS
+[Eugen-sample-template]    Module object refreshed.
+[Eugen-sample-template]    Validate START
+[Eugen-sample-template]    Validate SUCCESS
+[Eugen-sample-template]    Compile START
+[Eugen-sample-template]    Compile SUCCESS
+[Eugen-sample-template]    Activate START
+[Eugen-sample-template]    Configure START
+[Eugen-sample-template]    Configure SUCCESS
+[Eugen-sample-template]    MakeDeployed START
+[Eugen-sample-template]    MakeDeployed SUCCESS
+[Eugen-sample-template]    Activate SUCCESS
+[Eugen-sample-template]    Test STARTIt works!
 
 Use the following URL to view the result:
 http://172.28.0.2:52773/csp/sys/%25UnitTest.Portal.Indices.cls?Index=1&$NAMESPACE=IRISAPP
 All PASSED
 
-[dc-sample-template]    Test SUCCESS
+[Eugen-sample-template]    Test SUCCESS
 zpm:IRISAPP>
 ```
 

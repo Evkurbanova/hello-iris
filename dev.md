@@ -47,7 +47,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 zpm "load /home/irisowner/irisdev"
 
-zpm "test dc-sample"
+zpm "test Eugen-sample"
 ```
 
 ## select zpm test registry
